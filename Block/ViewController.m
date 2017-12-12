@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) FirstViewController *firstVC;
+@property (nonatomic, strong) FirstViewController *firstVC;//123
 @property (nonatomic, strong) UILabel *label;
 @end
 
@@ -70,5 +70,11 @@
     return _label;
 }
 
+- (FirstViewController *)firstVC {
+    if (!_firstVC) {
+        _firstVC = [[FirstViewController alloc] init];
+    }
+    return _firstVC;
+}
 
 @end

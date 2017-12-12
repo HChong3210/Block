@@ -1,2 +1,3 @@
-dependencies: /Users/hc/Desktop/Block/Block/AppDelegate.m \
-  /Users/hc/Desktop/Block/Block/AppDelegate.h
+dependencies: /Users/hc/Desktop/Me/Block/Block/AppDelegate.m \
+  /Users/hc/Desktop/Me/Block/Block/AppDelegate.h \
+  /Users/hc/Desktop/Me/Block/Block/SecondViewController.h
