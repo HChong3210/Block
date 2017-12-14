@@ -20,4 +20,6 @@ typedef void(^FailBlock)(id obj);
 @interface DownLoadManager : NSObject
 
 + (void)downLoadedSuccess:(SuccessBlock)success fail:(FailBlock)fail;
+
++ (void)uploadSuccess:(void(^)(id obj))success fail:(void(^)(id obj))fail;
 @end
