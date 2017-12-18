@@ -47,6 +47,11 @@
         
     }];
     
+    [DownLoadManager uploadSuccess:^(id obj) {
+        
+    } fail:^(id obj) {
+        
+    }];
     
 }
 

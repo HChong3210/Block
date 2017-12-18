@@ -14,6 +14,7 @@ typedef int(^Sum)(int, int);//定义一个Sum类型的block
 
 //@property (nonatomic, copy) Sum sum;
 @property (nonatomic, copy) int (^sum)(int a, int b);
+@property (nonatomic, copy) NameBlock nameBlock;
 @end
 
 @implementation SecondViewController
@@ -25,6 +26,8 @@ typedef int(^Sum)(int, int);//定义一个Sum类型的block
     
     [self test1];
     [self test2];
+    NSLog(@"%@", self.nameBlock(@"block作为返回值"));
+    [self nameTest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +51,18 @@ typedef int(^Sum)(int, int);//定义一个Sum类型的block
         return a + b;
     };
     NSLog(@"%d", self.sum(3, 4));
+}
+
+- (NSString *(^)(NSString *))nameBlock {
+    return ^NSString *(NSString *inputValue) {
+        return [inputValue stringByAppendingString:@"test"];
+    };
+}
+
+- (NameBlock)nameTest {
+    return ^NSString *(NSString *name) {
+        return [name stringByAppendingString:@"test"];
+    };
 }
 
 @end
